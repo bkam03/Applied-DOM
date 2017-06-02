@@ -13,8 +13,8 @@
    */
    function setMylightGreen() {
     var lightId = this.dataset.lightId;
-    var targetLight = document.querySelector(lightId);
-    targetLight.className = 'light-green';
+    var targetElement = document.querySelector(lightId);
+    targetElement.className = 'light-green';
    }
 
   /*
@@ -28,7 +28,11 @@
    * use a dom method to select an element where it's ID matches the value of lightId
    * on this dom element, set the className to the value of desiredClass
    */
-
+   function setMyLightClass(event, desiredClass) {
+    var lightId = this.dataset.lightId;
+    var targetElement = document.querySelector(lightId);
+    targetElement.className = desiredClass;
+   }
 
   /*
    * Declare 15 constants btn1, btn2, btn3, ...
