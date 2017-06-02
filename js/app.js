@@ -12,6 +12,7 @@
    * on this dom element, set the className to 'light-green'
    */
    function setMylightGreen() {
+    console.log(this);
     var lightId = this.dataset.lightId;
     var targetElement = document.getElementById(lightId);
     targetElement.className = 'light-green';
@@ -63,11 +64,10 @@
    * using the Function prototype method: apply
    * to set the context to the correct object (the current context)
    */
-   btn1.addEventListener('click', expression);
-
-   function expression() {
+   btn1.addEventListener('click', function(){
     setMylightGreen.apply(this);
-   }
+   });
+
   /*
    * Add a click event listener to btn2
    * the handler method will be a fat arrow function expression
@@ -76,6 +76,10 @@
    * using the Function prototype method: apply
    * to set the context to the correct object
    */
+   btn2.addEventListener('click', () => {
+    setMylightGreen.apply(btn2);
+   });
+
 
 
   /*
