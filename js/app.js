@@ -126,7 +126,9 @@
    * using the Function prototype method: call
    * to set the context to the correct object (the current context)
    */
-
+   btn6.addEventListener('click', function(){
+    setMylightGreen.call(this);
+   });
 
   /*
    * Add a click event listener to btn7
