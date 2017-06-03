@@ -268,6 +268,8 @@
    *
    * Hint: Do not declare a new function expression as an event handler.
    */
-
+   btn15.addEventListener('click', function(){
+    setMyLightClass.bind(this)(event, 'light-green');
+   });
 
 }(window));
